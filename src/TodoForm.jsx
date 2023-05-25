@@ -4,7 +4,7 @@ function TodoForm({ addTask }) {
   const [Title, setTitle] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+  event.preventDefault();
     if (Title.trim()) {
       addTask(Title);
       setTitle("");
@@ -16,13 +16,13 @@ function TodoForm({ addTask }) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <input
+            <input 
               type="text"
               placeholder="What Do you want to do?"
               value={Title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            <button className="btn btn-dark" type="submit">
+            <button onSubmit={handleSubmit} className="btn btn-dark" type="submit">
               Add ➕
             </button>
           </div>
