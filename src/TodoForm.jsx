@@ -14,7 +14,7 @@ function TodoForm({ addTask }) {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <form className="row" onSubmit={handleSubmit}>
           <div className="col">
             <input 
               type="text"
@@ -22,11 +22,11 @@ function TodoForm({ addTask }) {
               value={Title}
               onChange={(e) => setTitle(e.target.value)}
             />
-            <button onSubmit={handleSubmit} className="btn btn-dark" type="submit">
+            <button className="btn btn-dark" type="submit">
               Add ➕
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
