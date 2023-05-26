@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
+import Header from "./Header";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -34,7 +35,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Todo List App</h1>
+      <Header />
       <TodoForm addTask={addTask} />
       <TodoList
         tasks={tasks}
