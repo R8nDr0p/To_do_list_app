@@ -34,7 +34,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "beige" }}>
       <Header />
       <TodoForm addTask={addTask} />
       <TodoList
